@@ -1,7 +1,7 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/user');
 const { protect } = require('../middleware/auth');
 
 const signToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, {
